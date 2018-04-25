@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Ajax</title>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+</head>
+<body>
+
+<div id="testAjax">
+
+</div>
+
+
+<script>
+
+    $(function(){
+
+        $.getJSON('http://website2.dev/test2',  function(data){
+            console.log(data);
+        });
+
+/*        $.ajax({
+            url: 'http://website2.dev/test',
+            dataType: 'jsonp',
+            jsonpCallback: 'callback',
+            success: function(data){
+                $.each(data, function(i, val){
+                    $("#testAjax").append("<p>" + val.name + "</p>");
+                })
+            }
+        });*/
+
+    });
+
+</script>
+
+
+</body>
+</html>

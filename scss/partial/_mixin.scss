@@ -1,0 +1,19 @@
+
+@mixin round-btn{
+  border: 1px solid #b8b8b8;
+  border-radius: 5px;
+  background-color: #c9c9c9;
+}
+
+@mixin auto-color($color){
+  @include round-btn;
+  color: $color;
+}
+
+@mixin transition($duration:3s){
+  -webkit-transition: $duration ease-out;
+  -moz-transition: $duration ease-out;
+  -ms-transition: $duration ease-out;
+  -o-transition: $duration ease-out;
+  transition: $duration ease-out;
+}

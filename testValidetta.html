@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="bower_components/validetta/dist/validetta.css" rel="stylesheet" type="text/css" media="screen">
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bower_components/validetta/dist/validetta.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="exm1" method="POST" action="#">
+            <div>
+                <label>Required, minLength[2], maxLength[3] :</label>
+                <input type="text" name="name" class="form-control" data-validetta="required,minLength[2],maxLength[3]">
+            </div>
+            <div>
+                <label>Required, Number :</label>
+                <input type="text" name="number" class="form-control" data-validetta="number,required">
+            </div>
+            <div>
+                <label>EqualTo (name number) :</label>
+                <input type="text" name="equalto" class="form-control" data-validetta="required,equalTo[number]">
+            </div>
+            <div>
+                <label>Different (name number) :</label>
+                <input type="text" name="different" class="form-control" data-validetta="different[number]">
+            </div>
+            <div>
+                <label>Email :</label>
+                <input type="text" name="email" class="form-control" data-validetta="email">
+            </div>
+            <div>
+                <label>Credit Cart :</label>
+                <input type="text" name="creditCard" class="form-control" data-validetta="creditCard" />
+            </div>
+            <div>
+                <label>RegExp :</label>
+                <input type="text" name="regExp" class="form-control" data-validetta="regExp[regname]" />
+            </div>
+            <div>
+                <label>Callback :</label>
+                <input type="text" name="callback" class="form-control" data-validetta="callback[sum]" />
+            </div>
+            <div>
+                <label>Required ( Textarea ) :</label>
+                <textarea name="exm-txt" class="form-control" data-validetta="required"></textarea>
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-danger">Reset</button>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        $(function(){
+            $("#exm1").validetta({
+                validators:{
+                    regExp: {
+                        regname : {
+                            pattern : /^hello$/i,
+                            errorMessage : 'Custom Reg Error Message !'
+                        },
+                        example: {
+                            pattern: /^[\+][0-9]+?$|^[0-9]+?$/,
+                            errorMessage: 'Please enter number onely !'
+                        }
+                    },
+                    callback:{
+                        sum: {
+                            callback: function(el,value){
+                                if(value == (3+5)) {
+                                    return true
+                                }
+                                return false
+                            },
+                            errorMessage: "Incorrect total"
+                        }
+                    },
+                    realTime: true,
+                    display: 'inline'
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>

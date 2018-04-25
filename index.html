@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Hello</title>
+  <script src="bower_components/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+  <div id="app">
+    <input v-model="newTodo" v-on:keyup.enter="addTodo">
+    <ul>
+      <li v-for="todo in todos">
+        <span>{{todo.text}}</span>
+        <button v-on:click="removeTodo($index)">X</button>
+      </li>
+    </ul>
+  </div>
+
+  <div id="example-1">
+    Hello {{name}}
+  </div>
+
+<div id="example-2">
+  <p v-if="greeting">Hello!</p>
+</div>
+
+
+<script src="js/main.js"> </script>
+
+</body>
+</html>

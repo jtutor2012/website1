@@ -1,0 +1,80 @@
+/* line 8, ../scss/test.scss */
+.move {
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  -ms-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+/* line 12, ../scss/test.scss */
+.move-b {
+  -webkit-transition: 3s ease-out;
+  -moz-transition: 3s ease-out;
+  -ms-transition: 3s ease-out;
+  -o-transition: 3s ease-out;
+  transition: 3s ease-out;
+}
+
+/* line 17, ../scss/test.scss */
+.btn-blue {
+  border: 1px solid #b8b8b8;
+  border-radius: 5px;
+  background-color: #c9c9c9;
+  color: blue;
+}
+
+/* line 22, ../scss/test.scss */
+.bnt-red {
+  border: 1px solid #b8b8b8;
+  border-radius: 5px;
+  background-color: #c9c9c9;
+  color: red;
+}
+
+/* line 27, ../scss/test.scss */
+a {
+  color: red;
+  width: 310px;
+}
+
+/* line 32, ../scss/test.scss */
+.container {
+  background-color: #fffec9;
+}
+/* line 34, ../scss/test.scss */
+.container .span5 {
+  background-color: hotpink;
+}
+/* line 37, ../scss/test.scss */
+.container .span7 {
+  background-color: darkorange;
+}
+
+/* line 42, ../scss/test.scss */
+p {
+  background-color: pink;
+  background-image: url(img/lig.png);
+  background-repeat: repeat-y;
+}
+
+/* line 50, ../scss/test.scss */
+a.btn {
+  border-radius: 5px;
+  background-color: pink;
+}
+/* line 53, ../scss/test.scss */
+a.btn:hover {
+  background-color: orange;
+}
+
+/* line 58, ../scss/test.scss */
+.p1, .p2 {
+  background-color: gray;
+  color: red;
+}
+
+/* line 63, ../scss/test.scss */
+.p2 {
+  border: 1px solid white;
+}

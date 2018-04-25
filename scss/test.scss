@@ -1,0 +1,67 @@
+@import "compass";
+
+@import "partial/mixin";
+@import "partial/variant";
+
+
+
+.move{
+  @include transition(0.5s);
+}
+
+.move-b{
+  @include transition();
+}
+
+
+.btn-blue{
+  @include round-btn;
+  color: blue;
+}
+
+.bnt-red{
+  @include auto-color(red);
+}
+
+
+a{
+  color:$foo-color;
+  width: $foo-width + 300px;
+}
+
+.container{
+  background-color: #fffec9;
+  .span5{
+    background-color: hotpink;
+  }
+  .span7{
+    background-color: darkorange;
+  }
+}
+
+p{
+  background: {
+    color: pink;
+    image: url(img/lig.png);
+    repeat: repeat-y;
+  }
+}
+
+a.btn{
+  border-radius: 5px;
+  background-color: pink;
+  &:hover{
+    background-color: orange;
+  }
+}
+
+.p1{
+  background-color: gray;
+  color:red;
+}
+
+.p2{
+  @extend .p1;
+  border: 1px solid white;
+}
+
